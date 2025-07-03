@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanban Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h1 class="logo">kanban</h1>
+      <div class="boards">
+        <p>ALL BOARDS (3)</p>
+        <ul>
+          <li class="active">Platform Launch</li>
+          <li>Marketing Plan</li>
+          <li>Roadmap</li>
+        </ul>
+        <button class="new-board">+ Create New Board</button>
+      </div>
+      <div class="toggle">
+        <span class="light">☀️</span>
+        <label class="switch">
+          <input type="checkbox" id="mode-toggle" />
+          <span class="slider round"></span>
+        </label>
+        <span class="dark">🌙</span>
+      </div>
+      <button class="hide-sidebar">Hide Sidebar</button>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        <h2>Platform Launch</h2>
+        <button class="add-task">+ Add New Task</button>
+      </header>
+      <div class="columns">
+        <div class="column">
+          <h3 class="todo">● TODO (4)</h3>
+          <div class="card">Build UI for onboarding flow</div>
+          <div class="card">Build UI for search</div>
+          <div class="card">Build settings UI</div>
+          <div class="card">QA and test all major user journeys</div>
+        </div>
+        <div class="column">
+          <h3 class="doing">● DOING (6)</h3>
+          <div class="card">Design settings and search pages</div>
+          <div class="card">Add account management endpoints</div>
+          <div class="card">Design onboarding flow</div>
+          <div class="card">Add search enpoints</div>
+          <div class="card">Add authentication endpoints</div>
+          <div class="card">Research pricing points...</div>
+        </div>
+        <div class="column">
+          <h3 class="done">● DONE (7)</h3>
+          <div class="card">Conduct 5 wireframe tests</div>
+          <div class="card">Create wireframe prototype</div>
+          <div class="card">Review usability test results</div>
+          <div class="card">Create paper prototypes...</div>
+          <div class="card">Market discovery</div>
+          <div class="card">Competitor analysis</div>
+          <div class="card">Research the market</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('mode-toggle');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('light-mode');
+    });
+  </script>
+</body>
+</html>
+
